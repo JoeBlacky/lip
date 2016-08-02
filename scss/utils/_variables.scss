@@ -1,0 +1,34 @@
+ /* Colors ================================================================================ */
+	$primaryDarkColor:   #111111;
+	$secondaryDarkColor: #252525;
+	$errorColor:         #CC1D14;
+	$successColor:	 	   #06B86B;
+	$primaryTextColor:   #282F37;
+	$secondaryTextColor: #3D6E99;
+	$dividerColor:       #CCC;
+	$attentionColor:	   #E98B1C;
+	$secondaryColor: 	   #11BFF1;
+/* Fonts ================================================================================= */
+	$primaryFont: 'B20', sans-serif;
+	$iconsFont: 'Icomoon';
+	$iconClass: '.icn';
+/* Buttons =============================================================================== */
+	$buttonClass: '.btn';
+/* Variables Widths ====================================================================== */
+	$mainWidth: 960px;
+	$maxWidth: 1920px;
+	$minWidth: 320px;
+/* Transition Speed ====================================================================== */
+	$fast-speed: .2s;
+	$normalSpeed: .3s;
+	$slowSpeed: .5s;
+/* Indents =============================================================================== */
+	$mainIndent: 20px;
+/* Pleer Controls ======================================================================== */
+	$timeLineHeight: 4px;
+	$controlsIconWidth: 50px;
+	$controlsIconHeight: $controlsIconWidth;
+	$controlsHeight: $controlsIconWidth + $timeLineHeight;
+/* Ajax Loader =========================================================================== */
+	$ajaxLoader: url(../img/preloader.gif);
+/* ======================================================================================= */

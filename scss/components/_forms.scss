@@ -1,0 +1,59 @@
+/* Colors ================================================================================ */
+  input,
+  textarea{
+    width: 100%;
+    padding: $mainIndent/2;
+    outline: 0;
+    border: 1px solid transparent;
+    font: 14px/20px $primaryFont;
+    @extend %resetAppearence;
+    @extend %transition-fast-speed;
+  }
+  textarea{
+    resize: none;
+    height: 150px;
+    overflow: auto;
+  }
+  label{
+    display: inline-block;
+    margin: 0 0 $mainIndent/4;
+    font: 14px/16px $primaryFont;
+    cursor: pointer;
+  }
+  form{
+    position: relative;
+    &::before{
+      content: '';
+      background: #FFF #{$ajaxLoader} no-repeat center center;
+      transition: opacity $fast-speed linear, visibility $fast-speed linear;
+      @extend %overlay;
+      @extend %hidden;
+    }
+    &.loading{
+      &::before{
+        @extend %visible;
+      }
+    }
+  }
+  .message{
+    position: absolute;
+    font-size: 0;
+    @extend %hidden;
+    &.active{
+      position: relative;
+      height: auto;
+      padding: $mainIndent*.5;
+      text-align: center;
+      font-size: 16px;
+      color: #FFF;
+      background: rgba($primaryTextColor,.5);
+      @extend %visible;
+    }
+    &.success{
+      background: rgba($successColor,.5);
+    }
+    &.error{
+      background: rgba($errorColor,.5);
+    }
+  }
+/* ======================================================================================= */

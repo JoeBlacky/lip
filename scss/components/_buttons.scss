@@ -1,0 +1,29 @@
+/* Colors ================================================================================ */
+  .btn{
+    padding: $mainIndent/2 $mainIndent;
+    outline: 0;
+    border: 0;
+    background: $primaryTextColor url(../img/noise.png) repeat top left;
+    color: #FFF;
+    font: 16px/20px $primaryFont;
+    cursor: pointer;
+    @extend %resetAppearence;
+    @extend %transition-normal-speed;
+    @include border-radius(0);
+    &:hover{
+      background-color: lighten($primaryTextColor, 10%);
+    }
+    &-secondary{
+      background-color: $secondaryTextColor;
+      &:hover{
+        background-color: lighten($secondaryTextColor, 10%);
+      }
+    }
+    &-attention{
+      background-color: $attentionColor;
+      &:hover{
+        background-color: darken($attentionColor, 10%);
+      }
+    }
+  }
+/* ======================================================================================= */

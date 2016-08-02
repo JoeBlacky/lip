@@ -1,0 +1,27 @@
+/* ======================================================================================= */
+  .hero-image{
+    position: relative;
+    padding: $mainIndent 0;
+    text-align: center;
+    background: #FFF url(../img/sections/hero-image/background.jpg) no-repeat center center / cover;
+    box-shadow: 0 0 2px -1px #000 inset;
+    .mw{
+      height: 500px;
+      color: #FFF;
+      text-shadow: 1px 1px 1px #000;
+      &::before{
+        content: '';
+        width: 0;
+        height: 100%;
+        @extend %inline-block-middle;
+      }
+    }
+    .title{
+      font-size: 60px;
+    }
+    .sub-title{
+      font: 40px/50px $primaryFont;
+      text-transform: none;
+    }
+  }
+/* ======================================================================================= */

@@ -1,0 +1,32 @@
+/*  Nav ================================================================================== */
+  .main-nav{
+    width: 100%;
+    a{
+      position: relative;
+      margin: -1px 0 0;
+      padding: $mainIndent/2;
+      text-transform: uppercase;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background: $secondaryTextColor;
+        @extend %transition-normal-speed;
+      }
+      &::before{
+        left: 0;
+        top: 0;
+      }
+      &.active{
+        color: $secondaryTextColor;
+        &::before{
+          width: 100%;
+        }
+      }
+      &:hover{
+        color: $secondaryTextColor;
+      }
+    }
+  }
+/*  ====================================================================================== */

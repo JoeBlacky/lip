@@ -1,0 +1,112 @@
+/* Prices Section ======================================================================== */
+  .prices{
+    .grid{
+      > .itm{
+        vertical-align: top;
+      }
+      .content{
+        text-align: center;
+        color: #FFF;
+        background: lighten($primaryTextColor,10%) url(../img/noise.png) repeat top left;
+      }
+      .sub-title{
+        padding: $mainIndent/2 $mainIndent/4;
+        font: 16px/20px $primaryFont;
+        text-transform: none;
+        background-color: rgba($primaryDarkColor,.8);
+        border-bottom: 1px solid darken($primaryDarkColor,5%);
+        border-top: 1px solid darken($primaryDarkColor,5%);
+      }
+      .icn,
+      .price{
+        vertical-align: bottom;
+        padding: $mainIndent $mainIndent/5.5;
+        font: 400 20px/1 $primaryFont;
+        line-height: 20px;
+        font-style: normal;
+      }
+      .icn{
+        font: 17px/1 $iconsFont;
+      }
+    }
+    img{
+      width: 100%;
+    }
+    .image{
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: 183px 146px;
+        background-image: url('../img/sprite.png');
+        transform: translate(-50%,-50%);
+        @extend %inline-block-middle;
+      }
+    }
+    .implant{
+      &::after{
+        width: 51px;
+        height: 68px;
+        background-position: -132px 0;
+      }
+    }
+    .denture{
+      &::after{
+        width: 48px;
+        height: 72px;
+        background-position: 0 -74px;
+      }
+    }
+    .bracket{
+      &::after{
+        width: 84px;
+        height: 33px;
+        background-position: -50px -74px;
+      }
+    }
+    .dental-treatment{
+      &::after{
+        width: 57px;
+        height: 72px;
+        background-position: -72px 0;
+      }
+    }
+    .orthodontics{
+      &::after{
+        width: 70px;
+        height: 71px;
+        background-position: 0 -1px;
+      }
+    }
+  }
+  .accordion-price{
+    .grid{
+      margin: 0 (-$mainIndent/2);
+      > .itm,
+      .owl-item{
+        vertical-align: top;
+        padding: $mainIndent/2;
+      }
+    }
+    .owl-wrapper-outer{
+      padding: 0;
+    }
+    .grid-slider{
+      position: relative;
+      margin: 0;
+      padding: $mainIndent/2 0;
+      li{
+        display: block;
+      }
+    }
+    .accordion-hidden:checked{
+      + .accordion-headline{
+        + .accordion-content{
+          padding: 0;
+        }
+      }
+    }
+  }
+/* ======================================================================================= */

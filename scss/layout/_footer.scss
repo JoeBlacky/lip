@@ -1,0 +1,107 @@
+$footerBackground: $primaryTextColor;
+$linkIconHeight: 40px;
+$linkIconWidth: $linkIconHeight;
+$linkIconBackground: $secondaryTextColor;
+$footerContactInfoWidth: 65%;
+/*  Footer =============================================================================== */
+  #footer{
+    position: relative;
+    z-index: 1;
+    padding: $mainIndent 0;
+    color: #FFF;
+    background: $footerBackground url(../img/noise.png) repeat left top;
+    @include box-shadow(0 0 2px $footerBackground);
+    .mw{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 100% -$footerContactInfoWidth;
+        top: 0;
+        height: 100%;
+        border-left: 1px solid lighten($footerBackground,5%);
+        border-right: 1px solid darken($footerBackground,5%);
+      }
+    }
+    .phone,
+    .pin{
+      &::before{
+        font-size: 24px;
+      }
+    }
+    .sub-title{
+      margin: 0 0 $mainIndent/2;
+    }
+    .contact{
+      &-info,
+      &-form{
+        vertical-align: top;
+      }
+      &-info{
+        width: $footerContactInfoWidth;
+      }
+      &-form{
+        width: 100% - $footerContactInfoWidth;
+      }
+    }
+    input,
+    textarea{
+      margin: 0 0 $mainIndent/2;
+      &:focus{
+        border-color: $secondaryTextColor;
+      }
+    }
+    textarea{
+      height: 150px;
+      margin: 0 0 $mainIndent;
+    }
+    .btn{
+      margin: 0;
+    }
+    .links{
+      li{
+        margin: 0 0 $mainIndent*.5;
+      }
+      .link{
+        padding: 0 $mainIndent*.5 0 0;
+        font-size: $mainIndent*.8;
+        &:hover{
+          background: $linkIconBackground;
+          &::before{
+            border-color: #FFF;
+          }
+        }
+      }
+      .icn{
+        &::before{
+          width: $linkIconHeight;
+          height: $linkIconWidth;
+          padding: 0 $mainIndent*.4;
+          border-right: 1px solid lighten($footerBackground,5%);
+          margin: 0 $mainIndent/2 0 0;
+          font: 24px/#{$linkIconHeight} $iconsFont;
+          box-sizing: border-box;
+          @extend %inline-block-middle;
+        }
+      }
+    }
+    .message{
+      margin-top: $mainIndent;
+    }
+  }
+/* ======================================================================================= */
+  @media screen and (max-width: 1000px){
+    #footer{
+      .mw{
+        &::before{
+          display: none;
+        }
+      }
+      .contact{
+        &-info,
+        &-form{
+          width: 50%;
+        }
+      }
+    }
+  }

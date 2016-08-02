@@ -1,0 +1,49 @@
+/* ======================================================================================= */
+  .before-after{
+    position: relative;
+    &.active{
+      .hidden{
+        @extend %visible;
+      }
+    }
+    figcaption{
+      display: block;
+      .btn{
+        width: 100px;
+        text-align: center;
+      }
+    }
+    .images{
+      position: relative;
+      max-width: 250px;
+      margin: 0 auto $mainIndent;
+      white-space: nowrap;
+      font-size: 0;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border: $mainIndent/2 solid rgba(#FFF,.5);
+        z-index: 1;
+        @include border-radius(50%);
+        @include box-shadow(0 2px 3px 0 rgba($primaryDarkColor,.5));
+      }
+      img{
+        width: 100%;
+      }
+      .hidden{
+        margin: 0 0 0 -100%;
+        @extend %hidden;
+        @extend %transition-normal-speed;
+      }
+    }
+    .btn{
+      &.active{
+        background-color: $secondaryTextColor;
+      }
+    }
+  }
+/* ======================================================================================= */

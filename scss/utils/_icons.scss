@@ -1,0 +1,35 @@
+/* Icons ================================================================================= */
+  #{$iconClass}{
+    &::before,
+    &::after{
+      display: block;
+      font-family: $iconsFont;
+      @extend %transition-normal-speed;
+    }
+    &.phone{
+      &::before{
+        content: '\E901';
+      }
+    }
+    &.pin{
+      &::before{
+        content: '\E900';
+      }
+    }
+    &.mail{
+      &::before{
+        content: '\E902';
+      }
+    }
+    &.time{
+      &::before{
+        content: '\E904';
+      }
+    }
+    &.ruble{
+      &::before{
+        content: '\E903';
+      }
+    }
+  }
+/* ======================================================================================= */

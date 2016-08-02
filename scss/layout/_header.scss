@@ -1,0 +1,104 @@
+  $header-link-icon-color: $secondaryColor;
+  $logoHeight: 40px;
+/* Common for site header ================================================================ */
+  .header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: #FFF;
+    z-index: 9;
+    @include box-shadow(0 0 4px -1px #000);
+    .link{
+      position: relative;
+      color: $secondaryDarkColor;
+      &::before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $header-link-icon-color;
+      }
+      &:hover{
+        color: $secondaryColor;
+      }
+    }
+  }
+/* Block for replacing empty space created by fixed header =============================== */
+  .fake-header{
+    height: 170px;
+    @extend %transition-normal-speed;
+  }
+/* Top bar with contact info ============================================================= */
+  .header-info-bar{
+    padding: $mainIndent*.5 0 $mainIndent*.4;
+    .link{
+      position: relative;
+      margin-right: $mainIndent;
+      padding-left: $mainIndent*1.25;
+      font-size: $mainIndent*.7;
+      line-height: $mainIndent*.9;
+      &::before{
+        line-height: $mainIndent*.85;
+        font-size: $mainIndent*.9;
+      }
+    }
+    .pin{
+      &::before{
+        font-size: $mainIndent;
+      }
+    }
+  }
+/* Middle bar with logo and phone ======================================================== */
+  .header-logo-bar{
+    position: relative;
+    padding: $mainIndent*1.5 0;
+    border-top: 1px solid $dividerColor;
+    border-bottom: 1px solid $dividerColor;
+    background: #FFF;
+    @extend %transition-normal-speed;
+    .grid{
+      margin: 0 auto;
+    }
+    .grid-itm{
+      padding: 0;
+    }
+    .link{
+      padding-left: $mainIndent*2;
+      line-height: $mainIndent*1.5;
+      font-size: $mainIndent*.9;
+      &::before{
+        font: $mainIndent*1.5/1 $iconsFont;
+      }
+    }
+    .phone-block{
+      text-align: right;
+    }
+  }
+  .logo{
+    color: $primaryTextColor;
+    &:hover{
+      color: $secondaryTextColor;
+    }
+    img{
+      width: 50px;
+      margin: 0 $mainIndent/2 0 0;
+    }
+    .itm{
+      font: 400 20px/#{$logoHeight/2} $primaryFont;
+      small{
+        display: block;
+        font-size: 14px;
+      }
+    }
+  }
+/* Scroll effects ======================================================================== */
+  .scrolled{
+    .header-logo-bar{
+      padding: $mainIndent/2;
+    }
+    .fake-header{
+      height: 140px;
+    }
+  }
+/* ======================================================================================= */

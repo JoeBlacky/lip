@@ -1,0 +1,21 @@
+/*  ====================================================================================== */
+  .about-company{
+    img{
+      box-shadow: 0 0 2px -1px #000;
+    }
+    .image{
+      vertical-align: top;
+    }
+  }
+  @media screen and (max-width: 800px){
+  	.about-company{
+  		.description,
+  		.image{
+  			width: 100%;
+  		}
+  		.image{
+  			padding: 0 $mainIndent;
+  		}
+  	}
+  }
+/*  ====================================================================================== */
